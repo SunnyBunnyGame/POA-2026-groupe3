@@ -103,7 +103,9 @@ public class Profil
 		sceneStatistique.label.add(new Label(new Point(10,70), "Grade : " + grade, new Font("Arial", Font.PLAIN, 20)));
 		sceneStatistique.label.add(new Label(new Point(10,100), "Hight Level : " + core.topLvl, new Font("Arial", Font.PLAIN, 20)));
 		sceneStatistique.label.add(new Label(new Point(10,130), "Description", new Font("Arial", Font.PLAIN, 20)));
-
+		
+		// Text
+		sceneStatistique.text.add(new TextArea(new Point(10,155), 280, 125, ""));
 	}
 	
 	private void SetPdpScene() {

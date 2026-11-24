@@ -11,12 +11,14 @@ public class SceneComponent
 	public ArrayList<Sprite> sprite;
 	public ArrayList<Button> button;
 	public ArrayList<Label> label;
+	public ArrayList<TextArea> text;
 	
 	public SceneComponent() 
 	{
 		sprite = new ArrayList<Sprite>();
 		button = new ArrayList<Button>();
 		label = new ArrayList<Label>();
+		text = new ArrayList<TextArea>();
 	}
 	
 }

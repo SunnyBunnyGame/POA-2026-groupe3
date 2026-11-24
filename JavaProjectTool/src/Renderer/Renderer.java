@@ -62,7 +62,7 @@ public class Renderer extends JPanel
 			if(ComponentInScene(c, core.profil.currentScene))
 				continue;
 			
-			// Si pas trouvé
+			
 			this.remove(c);
 		}
 	}
@@ -79,6 +79,12 @@ public class Renderer extends JPanel
 			if(c == l)
 				return true;
 		}
+		for(TextArea t : scene.text)
+		{
+			if(c == t)
+				return true;
+		}
+		
 		return false;
 	}
 	
@@ -106,6 +112,13 @@ public class Renderer extends JPanel
 				
 				
 			draw.DrawLabel(g2, l);
+		}
+		for(TextArea t : scene.text)
+		{
+			if (t.getParent() != this)
+				this.add(t);
+			
+			draw.DrawText(g2, t);
 		}
 	}
 	

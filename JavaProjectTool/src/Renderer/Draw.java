@@ -26,5 +26,10 @@ public class Draw
 		// TODO Auto-generated method stub
 		
 	}
+
+	public void DrawText(Graphics2D g2, TextArea t) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
