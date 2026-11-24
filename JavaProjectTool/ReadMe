@@ -1,0 +1,6 @@
+H :	J'ai créer une base de programmation que je trouve bonne pour tout création de projet, une boucle de rafraichissement, une partie Logique et une partie Visuelle indépendante
+	Si vous jugez cela pas adapté, veuillez me signaler d'amont avant que je continue sur cette base.
+
+23/11
+H : J'ai ajouté 2 Objects interressants, les Events et les Scenes. Il sert a facilité les reaction des partie Logique ( Event ) et facilité la partie Visuelle ( Scene )
+	Indiquer si vous n'arrivez pas a les utiliser, il y'a un exemple deja posé sur Profil ou Advance
