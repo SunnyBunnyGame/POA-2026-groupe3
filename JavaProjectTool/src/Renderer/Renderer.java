@@ -44,7 +44,8 @@ public class Renderer extends JPanel
         
         DrawAdvancement(g2);
         DrawProfil(g2);
-
+        DrawCompilateur(g2);
+        
     }
 	
 	/*
@@ -62,6 +63,9 @@ public class Renderer extends JPanel
 			if(ComponentInScene(c, core.profil.currentScene))
 				continue;
 			
+			// Compilateur
+			if(ComponentInScene(c, core.compilateur.scene))
+				continue;
 			
 			this.remove(c);
 		}
@@ -100,7 +104,7 @@ public class Renderer extends JPanel
 		for(Button b : scene.button)
 		{
 			if (b.getParent() != this)
-				this.add(b);
+				AddComponent(b);
 				
 				
 			draw.DrawButton(g2, b);
@@ -108,7 +112,7 @@ public class Renderer extends JPanel
 		for(Label l : scene.label)
 		{
 			if (l.getParent() != this)
-				this.add(l);
+				AddComponent(l);
 				
 				
 			draw.DrawLabel(g2, l);
@@ -116,10 +120,16 @@ public class Renderer extends JPanel
 		for(TextArea t : scene.text)
 		{
 			if (t.getParent() != this)
-				this.add(t);
+				AddComponent(t);
 			
 			draw.DrawText(g2, t);
 		}
+	}
+
+	private void AddComponent(Component component)
+	{
+		this.add(component);
+		this.setComponentZOrder(component, 0);
 	}
 	
 
@@ -140,4 +150,11 @@ public class Renderer extends JPanel
 		
 	}
 	
+	/*
+	 * Compilateur
+	 */
+	private void DrawCompilateur(Graphics2D g2)
+	{
+		DrawScene(g2, core.compilateur.scene);
+	}
 }

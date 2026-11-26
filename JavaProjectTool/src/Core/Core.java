@@ -1,6 +1,7 @@
 package Core;
 
 import Advancement.Advance;
+import Compilateur.Compilateur;
 import Input.Input;
 import Profil.Profil;
 import Setting.InputConst;
@@ -18,6 +19,7 @@ public class Core
 	
 	public Advance advance;
 	public Profil profil;
+	public Compilateur compilateur;
 	
 	public Core(Input input) 
 	{
@@ -28,6 +30,7 @@ public class Core
 		
 		advance = new Advance(this);
 		profil = new Profil(this, "Moi");
+		compilateur = new Compilateur(this);
 	}
 	
 	// Boucle de mise a jour
